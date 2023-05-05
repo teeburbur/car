@@ -3,7 +3,7 @@
   <div class="container my-auto">
     <div class="copyright text-center my-auto">
       <!-- Display the date -->
-      <span>Copyright &copy; <?php echo date('Y'); ?></span>
+      <span>Copyright by Teeburbur &copy; <?php echo date('Y'); ?></span>
     </div>
   </div>
 </footer>
