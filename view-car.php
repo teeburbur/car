@@ -85,6 +85,16 @@
                       <label class="font-weight-bold text-gray-600 mb-0">Other Details</label>
                       <p class="text-gray-800 "><?php echo $view_other_details; ?></p>
                     </div>
+                    <!-- เรียกใช้ export.php -->
+                    <div>
+                    <a href="./export/export-car.php?vex=<?php echo base64_encode($row['id']);?>" class="btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                          <i class="fas fa-download"></i>
+                        </span>
+                        <span class="text">Download</span>
+                      </a>
+                    </div>
+
 
                   </div>
                 </div>
