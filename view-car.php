@@ -18,7 +18,7 @@
 <body id="page-top">
   <!-- Page Wrapper -->
   <div id="wrapper">
-    <?php //include the navigation bar section ?>
+    <?php //include the navigation bar section  ?>
     <?php include_once 'includes/nav.php'; ?>
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -38,7 +38,7 @@
                   <!-- Car Image Link  -->
                   <a href="uploads/cars/<?php echo $view_car_image; ?>">
                     <!-- Display Car Image -->
-                    <img class="img-fluid rounded mb-2" src="uploads/cars/<?php echo $view_car_image; ?>" alt="car image">
+                    <img class="img-fluid rounded mb-2" src="uploads/cars/<?php echo $view_car_image; ?>" alt="image-car">
                   </a>
                 </div>
               </div>
@@ -87,7 +87,7 @@
                     </div>
                     <!-- เรียกใช้ export.php -->
                     <div>
-                    <a href="./export/export-car.php?vex=<?php echo base64_encode($row['id']);?>" class="btn btn-primary btn-icon-split">
+                    <a href="./export-car.php?vex=<?php echo base64_encode($row['id']);?>" class="btn btn-primary btn-icon-split">
                         <span class="icon text-white-50">
                           <i class="fas fa-download"></i>
                         </span>

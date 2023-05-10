@@ -1,5 +1,5 @@
 <?php //page name ?>
-<?php $page = 'Edit-Car'; ?>
+<?php $page = 'Edit-car-detail'; ?>
 <?php //include the header section ?>
 <?php include_once 'includes/header.php'; ?>
 <?php 

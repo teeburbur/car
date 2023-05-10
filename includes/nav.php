@@ -62,6 +62,7 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
      <!-- Heading -->
+     <!-- Insure -->
      <div class="sidebar-heading">
      Insurance Company
     </div>
