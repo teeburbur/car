@@ -80,18 +80,6 @@
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tfoot>
-                    <tr>
-                      <th>S. No</th>
-                      <th>Part Car Name</th>
-                      <th>Part Car Model</th>
-                      <th>Part Car Manufacturer</th>
-                      <th>Part License Plate No.</th>
-                      <th>Part number</th>
-                      <th>Part store name</th>
-                      <th class="text-center">Action</th>
-                    </tr>
-                  </tfoot>
                   <tbody>
                   <?php
                     //for numbering

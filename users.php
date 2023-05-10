@@ -67,22 +67,13 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>S. No</th>
+                      <th>No</th>
                       <td>Name</td>
                       <th>Email</th>
                       <th class="text-center">Status</th>
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tfoot>
-                    <tr>
-                      <th>S. No</th>
-                      <td>Name</td>
-                      <th>Email</th>
-                      <th class="text-center">Status</th>
-                      <th class="text-center">Action</th>
-                    </tr>
-                  </tfoot>
                   <tbody>
                   <?php
                     //for counting
