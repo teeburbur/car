@@ -142,33 +142,33 @@
 
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Add Part Car</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Add Part</h6>
                   </div>
                   <div class="card-body">
                     <form class="" method="POST" action="" enctype="multipart/form-data">
                       <div class="row">
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="Part_car_name">Part Car Name</label>
-                            <input type="text" class="form-control form-control-user" id="Part_car_name" placeholder="Enter Part Car Name" name="Part_car_name" >
+                            <label for="Part_car_name">Part Name</label>
+                            <input type="text" class="form-control form-control-user" id="Part_car_name" placeholder="Enter Part Name" name="Part_car_name" >
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="Part_car_model">Part Car Model</label>
-                            <input type="text" class="form-control form-control-user" id="Part_car_model" placeholder="Enter Part Car Model" name="Part_car_model">
+                            <label for="Part_car_model">Part Model</label>
+                            <input type="text" class="form-control form-control-user" id="Part_car_model" placeholder="Enter Part Model" name="Part_car_model">
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="Part_car_manufacturer">Part Car Manufacturer</label>
-                            <input type="text" class="form-control form-control-user" id="Part_car_manufacturer" placeholder="Enter Part Car Manufacturer" name="Part_car_manufacturer">
+                            <label for="Part_car_manufacturer">Part Manufacturer</label>
+                            <input type="text" class="form-control form-control-user" id="Part_car_manufacturer" placeholder="Enter Part Manufacturer" name="Part_car_manufacturer">
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="Part_license_plate_number">Part License Plate Number</label>
-                            <input type="text" class="form-control form-control-user" id="Part_license_plate_number" placeholder="Enter Part License Plate Number" name="Part_license_plate_number">
+                            <label for="Part_license_plate_number">Part Serial-Number</label>
+                            <input type="text" class="form-control form-control-user" id="Part_license_plate_number" placeholder="Enter Part Number" name="Part_license_plate_number">
                           </div>
                         </div>
                         <div class="col-lg-6">
@@ -185,13 +185,13 @@
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="Part_car_image">Part Car Image</label>
+                            <label for="Part_car_image">Part Image</label>
                             <input type="file" class="form-control form-control-user" id="Part_car_image" name="Part_car_image" style="padding-bottom: 36px;">
                           </div>
                         </div>
                         <div class="col-lg-12">
                           <div class="form-group">
-                            <label for="other_details">Other Details <small>If any</small></label>
+                            <label for="other_details">Other Details <small>(If any)</small></label>
                             <textarea class="form-control form-control-user" id="other_details" name="other_details" ></textarea>
                           </div>
                         </div>

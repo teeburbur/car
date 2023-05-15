@@ -2,7 +2,6 @@
 <?php $page = 'partcar';  ?>
 <?php //include the header section ?>
 <?php include_once 'includes/header.php'; ?>
-
 <body id="page-top">
 <?php
   //if delete button has been click
@@ -64,16 +63,14 @@
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Part Car List</h6>
             </div>
-            <div class="card-body">
-
-              <div class="table-responsive">
+            <div class="card-body"> <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>S.No</th>
-                      <th>Part Car Name</th>
-                      <th>Part Car Model</th>
-                      <th>Part Car Manufacturer</th>
+                      <th>No</th>
+                      <th>Part Name</th>
+                      <th>Part Model</th>
+                      <th>Part Manufacturer</th>
                       <th>Part License Plate No.</th>
                       <th>Part number</th>
                       <th>Part store name</th>

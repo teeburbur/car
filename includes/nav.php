@@ -44,19 +44,19 @@
 
      <!-- Heading -->
      <div class="sidebar-heading">
-      Part Car
+      Part
     </div>
 
     <li class="nav-item">
       <a class="nav-link" href="add-partcar.php">
         <i class="fas fa-fw fa-plus"></i>
-        <span>Add Part Car</span></a>
+        <span>Add Part</span></a>
     </li>
 
     <li class="nav-item">
       <a class="nav-link" href="partcar.php">
-        <i class="fas fa-fw fa-car"></i>
-        <span>Part Cars</span></a>
+        <i class="fa fa-wrench"></i>
+        <span>Part</span></a>
     </li>
 
     <!-- Divider -->

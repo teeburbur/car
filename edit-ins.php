@@ -32,19 +32,19 @@
     //checking if the input values are empty
     if(empty($ins_com_name)){
       $valid = 0;
-      $errors[] = "insurance company Name can not be empty";
+      $errors[] = "Insurance company Name can not be empty";
     }
     if(empty($ins_com_address)){
       $valid = 0;
-      $errors[] = "insurance address can not be empty";
+      $errors[] = "Insurance address can not be empty";
     }
     if(empty($ins_com_phone)){
       $valid = 0;
-      $errors[] = "insurance phone can not be empty";
+      $errors[] = "Insurance phone can not be empty";
     }
     if(empty($ins_com_number)){
       $valid = 0;
-      $errors[] = "insurance Number can not be empty";
+      $errors[] = "Insurance Number can not be empty";
     }
 
     if($valid == 1){

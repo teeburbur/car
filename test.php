@@ -1,38 +1,117 @@
-<?php //Page name ?>
-<?php $page = 'Cars';  ?>
-<?php //include the header section ?>
-<?php include_once 'includes/header.php'; ?>
+<? $page = 'Data'; ?>
+
+<?php include_once 'includes/header.php';?>
+
+<?php
+
+// ดึงข้อมูลจังหวัด
+$provinces = [];
+$sql = "SELECT * FROM provinces";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $provinces[$row["province_id"]] = $row["province_name"];
+    }
+}
+
+// ดึงข้อมูลเขต
+$districts = [];
+$sql = "SELECT * FROM districts";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $districts[$row["district_id"]] = [
+            "district_name" => $row["district_name"],
+            "province_id" => $row["province_id"]
+        ];
+    }
+}
+
+// ดึงข้อมูลแขวง
+$subdistricts = [];
+$sql = "SELECT * FROM subdistricts";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while ($row = $result->fetch_assoc()) {$subdistricts[$row["subdistrict_id"]] = [
+"subdistrict_name" => $row["subdistrict_name"],
+"district_id" => $row["district_id"]
+];
+}
+
+}
+
+// ตัวอย่างการใช้งาน
+$provinceId = 1; // ตัวอย่างเลือกจังหวัดที่มี ID เท่ากับ 1 (กรุงเทพมหานคร)
+$districtId = 2; // ตัวอย่างเลือกเขตที่มี ID เท่ากับ 2 (ราชเทวี)
+
+// แสดงชื่อจังหวัด
+if (isset($provinces[$provinceId])) {
+echo "จังหวัด: " . $provinces[$provinceId] . "<br>";
+}
+
+// แสดงชื่อเขต
+if (isset($districts[$districtId])) {
+echo "เขต: " . $districts[$districtId]["district_name"] . "<br>";
+
+// แสดงรายชื่อแขวงในเขตนั้น
+foreach ($subdistricts as $subdistrictId => $subdistrict) {
+    if ($subdistrict["district_id"] == $districtId) {
+        echo "แขวง: " . $subdistrict["subdistrict_name"] . "<br>";
+    }
+}
+}
+
+// ปิดการเชื่อมต่อฐานข้อมูล
+$conn->close();
+?>
+
 
 <body id="page-top">
-  <?php
-  //if delete button has been click
-  if (isset($_POST['delete'])) {
-    // decode the id 
-    $id = base64_decode($_POST['id']);
-    //select the cars by id to delete the image of the car
-    $statement = $conn->prepare("SELECT * FROM cars WHERE id = ?");
-    $statement->execute(array($id));
-    $result = $statement->fetch(PDO::FETCH_ASSOC);
-    //delete the image of the car
-    unlink('uploads/cars/' . $result['car_image']);
+    <?
+    if (isset($_POST['save'])) {
+        $valid = 1;
 
-    //delete the selected car
-    $stmt_delete = $conn->prepare('DELETE FROM cars WHERE id = ?');
-    //execute the delete query
-    $delete = $stmt_delete->execute(array($id));
+        $cus_name = $_POST['cus_name'];
+        $cus_lastname = $_POST['cus_lname'];
+        $cus_phone = $_POST['cus_tel'];
+        $cus_email = $_POST['cus_email'];
+        $cus_address = $_POST['cus_address'];
+        $cus_province = $_POST['cus_province'];
+        $cus_district = $_POST['cus_district'];
+        $cus_subdistrict = $_POST['cus_subdistrict'];
+        $cus_zipcode = $_POST['cus_zipcode'];
+        $car_image     = $_FILES['car_image']['name'];
+        $car_image_tmp = $_FILES['car_image']['tmp_name'];
 
-    //if deleted
-    if ($delete) {
-      //create a session of the success message
-      $_SESSION['success'] = "Car has been deleted";
-      //redirect to the cars page
-      header('location: cars.php');
-      exit();
+        if ($car_image != '') {
+
+            $car_image_ext = pathinfo($car_image, PATHINFO_EXTENSION);
+            //get the file name of the image
+            $file_name = basename($car_image, '.' . $car_image_ext);
+            //ตรวจนามสกุลไฟล์ภาพรถ 
+            if ($car_image_ext != 'jpg' && $car_image_ext != 'png' && $car_image_ext != 'jpeg' && $car_image_ext != 'gif') {
+              $valid = 0;
+              $errors[] = 'You must have to upload jpg, jpeg, gif or png file<br>';
+            }
+          }
+
+        //สร้างฟังก์ชันในการตรวจสอบค่าว่างในแต่ละช่อง
+        if (empty($cus_name) || empty($cus_lastname) || empty($cus_phone) || empty($cus_email) || empty($cus_address) || empty($cus_province) || empty($cus_district) || empty($cus_subdistrict) || empty($cus_zipcode)) {
+            // กระบวนการที่ต้องทำเมื่อพบค่าว่างในช่องข้อมูล
+            echo "กรุณากรอกข้อมูลให้ครบทุกช่อง";
+        } else {
+            // กระบวนการที่ต้องทำเมื่อไม่พบค่าว่างในช่องข้อมูลทุกช่อง
+            // อาจเป็นการบันทึกข้อมูลหรือกระทำอื่นๆ
+            // ...
+        }
+        
+
     }
-  }
-  ?>
-  <!-- Page Wrapper -->
-  <div id="wrapper">
+
+    ?>
+</body>
+
+<div id="wrapper">
     <?php //include the navigation bar section 
     ?>
     <?php include_once 'includes/nav.php'; ?>
@@ -66,10 +145,9 @@
           <!-- DataTables Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Cars List</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Form</h6>
             </div>
             <div class="card-body">
-
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
