@@ -120,26 +120,26 @@
                       <div class="row">
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="ins_com_name">Ins Com Name</label>
-                            <input type="text" class="form-control form-control-user" id="ins_com_name" placeholder="Enter ins com name" name="ins_com_name" >
+                            <label for="ins_com_name">Insurance Name</label>
+                            <input type="text" class="form-control form-control-user" id="ins_com_name" placeholder="Enter Insurance Name" name="ins_com_name" >
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="ins_com_address">ins com address</label>
-                            <input type="text" class="form-control form-control-user" id="ins_com_address" placeholder="Enter ins com address" name="ins_com_address">
+                            <label for="ins_com_address">Insurance Address</label>
+                            <input type="text" class="form-control form-control-user" id="ins_com_address" placeholder="Enter Insurance Address" name="ins_com_address">
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="ins_com_phone">ins com phone</label>
-                            <input type="text" class="form-control form-control-user" id="ins_com_phone" placeholder="Enter ins com phone" name="ins_com_phone">
+                            <label for="ins_com_phone">Insurance Phone-Number</label>
+                            <input type="text" class="form-control form-control-user" id="ins_com_phone" placeholder="Enter Insurance phone number" name="ins_com_phone">
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group">
-                            <label for="ins_com_number">ins com number</label>
-                            <input type="text" class="form-control form-control-user" id="ins_com_number" placeholder="Enter ins com Number" name="ins_com_number">
+                            <label for="ins_com_number">Insurance com number</label>
+                            <input type="text" class="form-control form-control-user" id="ins_com_number" placeholder="Enter Insurance com Number" name="ins_com_number">
                           </div>
                         </div>
                         

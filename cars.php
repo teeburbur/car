@@ -3,35 +3,6 @@
 <?php //include the header section ?>
 <?php include_once 'includes/header.php'; ?>
 
-<?php
-// // Include the MPDF library
-// require_once 'mpdf/vendor/autoload.php';
-
-// // Function to generate and download the PDF
-// function generatePDF($id)
-// {
-//   // Connect to the database and retrieve the car data
-//   // ...
-
-//   // Generate the PDF content using Mpdf
-//   $mpdf = new \Mpdf\Mpdf();
-//   $mpdf->WriteHTML('<h1>Car Details</h1>');
-//   // Add the car details to the PDF
-//   // ...
-
-//   // Output the PDF to the browser for download
-//   $mpdf->Output('car_details.pdf', 'D');
-// }
-// // Check if the "ex" parameter is set (download request)
-// if (isset($_GET['ex'])) {
-//   // Decode the car ID
-//   $carId = base64_decode($_GET['ex']);
-//   // Generate and download the PDF
-//   generatePDF($carId);
-//   exit(); // Stop executing the rest of the page
-// }
-?>
-
 <body id="page-top">
   <?php
   //if delete button has been click
@@ -103,7 +74,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>S. No</th>
+                      <th>No.</th>
                       <th>Car Name</th>
                       <th>Model</th>
                       <th>Manufacturer</th>
@@ -172,8 +143,8 @@
                             </div>
                           </div>
                           <!-- Download to pdf -->
-                          <!-- <a href="./car.php?ex=<?php echo base64_encode($row['id']); ?>" class="btn btn-info btn-circle btn-sm">
-                          <i class="fas fa-download"></i> -->
+                          <a href="./export-car.php" class="btn btn-info btn-circle btn-sm">
+                          <i class="fas fa-download"></i>
                         </td>
                       </tr>
                     <?php endforeach; ?>

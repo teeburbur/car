@@ -77,7 +77,7 @@
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
-                  <tfoot>
+                  <!-- <tfoot>
                     <tr>
                       <th>Insurance company Name</th>
                       <th>Insurance company Address</th>
@@ -85,7 +85,7 @@
                       <th>Insurance company No.</th>
                       <th class="text-center">Action</th>
                     </tr>
-                  </tfoot>
+                  </tfoot> -->
                   <tbody>
                   <?php
                     //for numbering
